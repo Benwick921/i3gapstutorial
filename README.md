@@ -1,9 +1,85 @@
 # i3gapstutorial
 i3-gaps Installation Tutorial
+
 ## Dependencies
+i3-gaps has some packages that are required for it to work so install these things:
 ```bash
 sudo apt install libxcb1-dev libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev libxcb-icccm4-dev
 sudo apt install libyajl-dev libstartup-notification0-dev libxcb-randr0-dev libev-dev libxcb-cursor-dev
 sudo apt install libxcb-xinerama0-dev libxcb-xkb-dev libxkbcommon-dev libxkbcommon-x11-dev autoconf
 sudo apt install xutils-dev libtool automake
 ```
+You also need to install libxcb-xrm-dev in case its missing.
+``` bash
+sudo apt install libxcb-shape0-dev
+``` 
+
+## Installing
+i3-gaps also needs to be installed from source so run these commands (use sudo just in case):
+``` bash
+cd tmp
+git clone https://www.github.com/Airblader/i3 i3-gaps
+cd i3-gaps
+git checkout gaps && git pull
+sudo autoreconf --force --install
+sudo rm -rf build
+mkdir build
+cd build
+sudo ../configure --prefix=/usr --sysconfdir=/etc --disable-sanitizers
+sudo make
+sudo make install
+```
+Now i3-gaps should be installed.
+
+## Configuring
+To enable gaps you need to set some variables in your i3 config:
+```
+gaps inner <# of pixels>
+gaps outer <# of pixels>
+```
+I suggest to add the previews two lines at the bottom of your i3 config file to keep it organized from what's default and what you are adding, your i3 config file should be in:
+```
+~/.config/i3/config
+```
+If you don't find it you can create it manually.
+Add this to get rid of titlebars because gaps doesen't work with titlebars:
+```
+for_window [class="^.*"] border pixel 2
+```
+Refresh i3 (Mod+r) and you're good to go!
+
+## Troubleshooting
+ERROR: Dependency: i3 Error: Status_command not found (exit 127).
+``` bash
+sudo apt install i3status
+```
+ERROR: Mod+d not working.
+``` bash
+sudo apt-get install dmenu
+```
+## System Troubleshooting
+Changing default terminal bindin `$Mod+d exec urxvt` doesent work any more.
+For more information follow the tutorial [here](https://www.osradar.com/change-the-default-terminal-emulator-on-linux/).
+The solution is to change the whole system's default terminal.
+``` bash
+sudo update-alternatives --config x-terminal-emulator
+```
+
+
+
+```diff
+- text in red
++ text in green
+! text in orange
+# text in gray
+```
+
+
+
+
+
+
+
+
+
+
