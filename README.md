@@ -1,5 +1,7 @@
-# i3gapstutorial
-i3-gaps Installation Tutorial
+# i3-gaps Installation Tutorial
+Parts of the tutorial are taken from other tutorials.
+
+![GitHub Logo](https://cdn.discordapp.com/attachments/537387570620006401/698175766772318218/unknown.png)
 
 ## Dependencies
 i3-gaps has some packages that are required for it to work so install these things:
@@ -48,7 +50,7 @@ for_window [class="^.*"] border pixel 2
 ```
 Refresh i3 (Mod+r) and you're good to go!
 
-## Troubleshooting
+## i3-gaps Troubleshooting
 ERROR: Dependency: i3 Error: Status_command not found (exit 127).
 ``` bash
 sudo apt install i3status
@@ -57,29 +59,29 @@ ERROR: Mod+d not working.
 ``` bash
 sudo apt-get install dmenu
 ```
+
+## Desktop Background
+To change the desktop background we need to install the following program:
+``` bash
+sudo apt install feh
+```
+and add the following line to your i3 config file:
+``` 
+exec_always feh --bg-scale /path/to/image
+```
+
 ## System Troubleshooting
 Changing default terminal bindin `$Mod+d exec urxvt` doesent work any more.
 For more information follow the tutorial [here](https://www.osradar.com/change-the-default-terminal-emulator-on-linux/).
-The solution is to change the whole system's default terminal.
+The solution is to install `URxvt`
+``` bash
+sudo apt install rxvt-unicode
+```
+and change the whole system's default terminal.
 ``` bash
 sudo update-alternatives --config x-terminal-emulator
 ```
-
-
-
-```diff
-- text in red
-+ text in green
-! text in orange
-# text in gray
+Sometimes i3-gaps doesen't start the network manager for some reason and you are disconnected, you need to restart the network manager.
+``` bash
+sudo service network-manager restart
 ```
-
-
-
-
-
-
-
-
-
-
