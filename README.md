@@ -70,7 +70,7 @@ and add the following line to your i3 config file:
 ``` 
 exec_always feh --bg-scale /path/to/image
 ```
-now refresh i3 (Mod+r)
+now refresh i3 (Mod+r).
 
 ## System Troubleshooting
 Changing default terminal bindin `$Mod+d exec urxvt` doesent work any more.
