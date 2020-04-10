@@ -1,5 +1,6 @@
 # i3-gaps Installation Tutorial
 Parts of the tutorial are taken from other tutorials.
+I put my files to take inspiration from
 
 ![GitHub Logo](https://cdn.discordapp.com/attachments/537387570620006401/698175766772318218/unknown.png)
 
