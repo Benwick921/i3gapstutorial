@@ -74,7 +74,7 @@ exec_always feh --bg-scale /path/to/image
 ## System Troubleshooting
 Changing default terminal bindin `$Mod+d exec urxvt` doesent work any more.
 For more information follow the tutorial [here](https://www.osradar.com/change-the-default-terminal-emulator-on-linux/).
-The solution is to install `URxvt`
+The solution is to install `URxvt`.
 ``` bash
 sudo apt install rxvt-unicode
 ```
@@ -82,6 +82,7 @@ and change the whole system's default terminal.
 ``` bash
 sudo update-alternatives --config x-terminal-emulator
 ```
+then customize your `~/.Xaresources` file to customize your `URxvt` terminal.<r/>
 Sometimes i3-gaps doesen't start the network manager for some reason and you are disconnected, you need to restart the network manager.
 ``` bash
 sudo service network-manager restart
