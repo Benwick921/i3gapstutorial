@@ -14,6 +14,7 @@ sudo apt install xutils-dev libtool automake
 ```
 You also need to install libxcb-xrm-dev in case its missing.
 ``` bash
+sudo apt install libxcb-xrm-dev
 sudo apt install libxcb-shape0-dev
 ``` 
 
