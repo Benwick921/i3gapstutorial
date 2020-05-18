@@ -5,7 +5,7 @@ I put my dot files to take inspiration from.
 ![GitHub Logo](https://cdn.discordapp.com/attachments/537387570620006401/698175766772318218/unknown.png)
 
 ## Dependencies
-i3-gaps has some packages that are required for it to work so install these things:
+i3-gaps has some packages that are required for it to work so install them:
 ```bash
 sudo apt install libxcb1-dev libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev libxcb-icccm4-dev
 sudo apt install libyajl-dev libstartup-notification0-dev libxcb-randr0-dev libev-dev libxcb-cursor-dev
