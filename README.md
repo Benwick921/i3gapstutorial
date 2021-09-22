@@ -1,6 +1,6 @@
 # i3-gaps Installation Tutorial
 
-update 22/09/2021
+*Update 22/09/2021*
 
 Parts of the tutorial are taken from other tutorials.<br/>
 I put my dot files to take inspiration from.
