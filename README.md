@@ -73,8 +73,45 @@ exec_always feh --bg-scale /path/to/image
 ```
 now refresh i3 (Mod+r).
 
+## Terminal tranbsparency
+In order to get ther fancy terminal trasparency `compon` is needed. Follow the guide to install and set compton config file.
+
+Install `compotn` (updating is suggested before installing)
+
+```
+sudo apt install compton
+```
+
+Create a config file for compton to the following location
+
+```
+~/.config/compton.conf
+```
+
+Put this line inside the config file and replace with your terminal.
+
+```
+opacity-rule = ["85:class_g = 'Gnome-terminal'"];
+```
+
+Add the execution of compton on thr i3 config file.
+
+```
+exec --no-startup-id compton
+```
+Now the trasparency is set to default. You can change the active and inactive window trasparency level with the following lines.
+
+```
+active-opacity = 0.75;
+inactive-opacity = 0.75;
+```
+
+In order to see the trasparency now (at least for Gnome-terminal) I can set it from the terminal preferences menu and chose what level of transparency I want without messing up with the configuration file of compton.
+
+In order to see the result you have to exit i3 and log in back.
+
 ## System Troubleshooting
-Changing default terminal bindin `$Mod+d exec urxvt` doesent work any more.
+Changing default terminal bind in `$Mod+d exec urxvt` doesent work any more.
 For more information follow the tutorial [here](https://www.osradar.com/change-the-default-terminal-emulator-on-linux/).
 The solution is to install `URxvt`.
 ``` bash
