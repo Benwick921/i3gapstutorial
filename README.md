@@ -1,8 +1,22 @@
 # i3-gaps Installation Tutorial
+
+update 22/09/2021
+
 Parts of the tutorial are taken from other tutorials.<br/>
 I put my dot files to take inspiration from.
 
 ![GitHub Logo](https://cdn.discordapp.com/attachments/537387570620006401/698175766772318218/unknown.png)
+
+## Install from Repository
+i3-gaps can be installed directly from repository, no need to mess with dependecies and manual installing pain.
+
+```
+sudo add-apt-repository ppa:regolith-linux/release
+sudo apt update
+sudo apt install i3-gaps
+```
+
+Manually installing i3-gaps is not suggested because many libraries has changes and they dont work any more and many repositories doesent have the libraries needed.
 
 ## Dependencies
 i3-gaps has some packages that are required for it to work so install them:
@@ -108,7 +122,10 @@ inactive-opacity = 0.75;
 
 In order to see the trasparency now (at least for Gnome-terminal) I can set it from the terminal preferences menu and chose what level of transparency I want without messing up with the configuration file of compton.
 
-In order to see the result you have to exit i3 and log in back.
+![lvl1](https://github.com/Benwick921/i3gapstutorial/blob/master/lvl1.PNG)
+![lvl2](https://github.com/Benwick921/i3gapstutorial/blob/master/lvl2.PNG)
+
+In order to see the result from compton config file you have to exit i3 and log in back.
 
 ## System Troubleshooting
 Changing default terminal bind in `$Mod+d exec urxvt` doesent work any more.
