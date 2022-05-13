@@ -143,6 +143,23 @@ In order to see the trasparency now (at least for Gnome-terminal) I can set it f
 
 In order to see the result from compton config file you have to exit i3 and log in back.
 
+## Enable copy/paste between host and i3-vm
+
+Install open-vm-tools
+
+```
+sudo apt install open-vm-tools
+sudo apt install open-vm-tools-desktop
+```
+
+add the following line to the i3 config file
+
+```
+exec --no-startup-id vmware-user
+```
+
+If not working try unistalling vmware-tools installed via vmware.
+
 ## System Troubleshooting
 Changing default terminal bind in `$Mod+d exec urxvt` doesent work any more.
 For more information follow the tutorial [here](https://www.osradar.com/change-the-default-terminal-emulator-on-linux/).
