@@ -152,7 +152,7 @@ sudo apt install open-vm-tools
 sudo apt install open-vm-tools-desktop
 ```
 
-add the following line to the i3 config file
+add the following line to the i3 config file and reboot.
 
 ```
 exec --no-startup-id vmware-user
