@@ -8,10 +8,26 @@ I put my dot files to take inspiration from.
 ![GitHub Logo](https://cdn.discordapp.com/attachments/537387570620006401/698175766772318218/unknown.png)
 
 ## Install from Repository
-i3-gaps can be installed directly from repository, no need to mess with dependecies and manual installing pain.
+i3-gaps can be installed directly from repository, no need to mess with dependecies and manual installing pain. Add the kali linux repository.
 
 ```
-sudo add-apt-repository ppa:regolith-linux/release
+deb http://http.kali.org/kali kali-rolling main contrib non-free
+```
+
+If there is an error about a missing key similar to the following one:
+```
+W: GPG error: http://http.kali.org/kali kali-rolling InRelease. The following signatures couldn't be verified because the public key is not available: NO_PUBKEY F6BC817356A3D45E
+```
+
+Execute the following command with the key specified in the error message:
+
+```
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys <MISSING KEY>
+```
+
+and finally update and install i3-gaps.
+
+```
 sudo apt update
 sudo apt install i3-gaps
 ```
