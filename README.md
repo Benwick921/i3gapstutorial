@@ -34,7 +34,7 @@ sudo apt install i3-gaps
 
 Manually installing i3-gaps is not suggested because many libraries has changes and they dont work any more and many repositories doesent have the libraries needed.
 
-## Dependencies
+## Manual Installaion's dependencies
 i3-gaps has some packages that are required for it to work so install them:
 ```bash
 sudo apt install libxcb1-dev libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev libxcb-icccm4-dev
